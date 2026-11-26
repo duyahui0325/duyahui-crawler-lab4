@@ -5,8 +5,8 @@
 
 | 任务 | 内容 | 结果 |
 | --- | --- | --- |
-| 任务二 | 利用 Selenium 模拟鼠标翻页，爬取[软科中国大学排名 2025](https://www.shanghairanking.cn/rankings/bcur/2025) | 20 页共 **589** 条，保存为 CSV + Excel |
-| 任务三 | 利用 Selenium 自动登录演示站点，爬取商品信息并存储 | [saucedemo](https://www.saucedemo.com/) 登录成功，抓取 **6** 件商品 |
+| 任务一（要求 2） | 利用 Selenium 模拟鼠标翻页，爬取[软科中国大学排名 2025](https://www.shanghairanking.cn/rankings/bcur/2025) | 20 页共 **589** 条，保存为 CSV + Excel |
+| 任务二（要求 3） | 利用 Selenium 自动登录演示站点，爬取商品信息并存储 | [saucedemo](https://www.saucedemo.com/) 登录成功，抓取 **6** 件商品 |
 
 ## 一、实验环境
 
@@ -21,8 +21,8 @@
 
 ```
 动态网页爬取/
-├── ranking_spider.py     # 任务二：模拟鼠标翻页，爬取软科中国大学排名 2025
-├── login_spider.py       # 任务三：自动登录 saucedemo 并抓取商品信息
+├── ranking_spider.py     # 任务一（要求 2）：模拟鼠标翻页，爬取软科中国大学排名 2025
+├── login_spider.py       # 任务二（要求 3）：自动登录 saucedemo 并抓取商品信息
 ├── spider_utils.py       # 公共模块：创建 Edge 驱动、保存 CSV/Excel、统计耗时
 ├── requirements.txt      # 依赖清单
 ├── data/                 # 运行后生成的数据文件与截图
@@ -91,7 +91,7 @@ ActionChains(driver).move_to_element(next_btn).pause(0.2).click().perform()
 
 ## 五、运行结果
 
-### 任务二：软科中国大学排名 2025（前 10 名）
+### 任务一（要求 2）：软科中国大学排名 2025（前 10 名）
 
 | 排名 | 学校名称 | 英文名称 | 学校标签 | 省市 | 办学类型 | 总分 | 办学层次 |
 | ---: | --- | --- | --- | --- | --- | ---: | ---: |
@@ -111,7 +111,7 @@ ActionChains(driver).move_to_element(next_btn).pause(0.2).click().perform()
 
 ![软科排名页面](data/ranking_page.png)
 
-### 任务三：登录成功后的商品列表
+### 任务二（要求 3）：登录成功后的商品列表
 
 ![登录成功](data/login_success.png)
 
